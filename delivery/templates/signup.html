@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Form</title>
+</head>
+<body>
+  <h2>Registration Form</h2>
+
+  <form  method="post" action="{% url 'signUp' %}">
+    {% csrf_token %}
+    <label for="name">User Name:</label><br>
+    <input type="text" id="name" name="username" required><br><br>
+
+     <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="phone">Phone:</label><br>
+    <input type="tel" id="phone" name="phone" required><br><br>
+
+    <label for="address">Address:</label><br>
+    <textarea id="address" name="address"></textarea><br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+</body>
+</html>
